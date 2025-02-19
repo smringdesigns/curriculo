@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4F4;
+
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-krona: "Krona One", sans-serif;
+    --font-menu: "poppins-bold";
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 10px;
+    color: var(--color-terciario);
+}
+
+nav ul li a {
+    font-family: var(--font-krona);
+    font-size: 16px;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #F6F6F6;
+}
+
+.selected {
+    color: #F6F6F6;
+}
+
+.menu-mobile {
+    display: none; /* se desactiva el menu para mobiles y pantallas*/
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 50px;
+}
+
+.about-content-section {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-content-title {
+    font-size: 36px;
+    font-family: var(--font-krona);
+    color: var(--color-terciario);
+}
+
+.about-content-text {
+    font-size: 24px;
+    font-family: var(--font-montserrat);
+}
+
+.about-img {
+    margin: 5px 25px;
+}
+
+.footer {
+    background-color: var(--color-terciario);
+    padding: 15px;
+    color: var(--color-primario);
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-menu);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+@media(max-width: 800px) {
+    .menu-mobile {
+        display: flex;
+    }
+    .menu-screen {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    .about-content {
+        width: auto;
+        flex-direction: column-reverse;
+    }
+
+    .about-content-section {
+        padding: 5%;
+    }
+
+    .about-content-title {
+        font-size: 28px;
+    }
+
+    .about-content-text {
+        font-size: 20px;
+    }
+
+    .footer {
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+    }
+}
